@@ -24,6 +24,7 @@ function onFormSubmit(event) {
   // console.log(event.currentTarget); это форма
   event.currentTarget.reset(); //сброс полей при submit
   localStorage.removeItem(STORAGE_KEY);
+  console.log(formData);
 }
 
 form.addEventListener('input', throttle(onFormInput, 500));
