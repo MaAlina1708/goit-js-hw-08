@@ -11,5 +11,5 @@ const timeUpd = function ({ seconds }) {
 
 player.on('timeupdate', throttle(timeUpd, 1000));
 
-const parsedTime = JSON.parse(localStorage.getItem(STORAGE_KEY));
+const parsedTime = JSON.parse(localStorage.getItem(STORAGE_KEY)) || 0;
 player.setCurrentTime(parsedTime);
